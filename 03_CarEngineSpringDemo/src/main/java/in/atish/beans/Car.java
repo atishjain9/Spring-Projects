@@ -9,9 +9,11 @@ public class Car {
 		System.out.println("Car Constructor Called..");
 	}
 	
-	public void setEngine(IEngine eng)
+	public void setEng(IEngine eng)
 	{
+		System.out.println("Setter method is called...");
 		this.eng=eng;
+		System.out.println("Injected..:"+eng.getClass().getName());
 	}
 	public void drive()
 	{

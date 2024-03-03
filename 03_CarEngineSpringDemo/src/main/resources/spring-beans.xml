@@ -6,10 +6,13 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
+	<!-- bean with eager initialization or loading -->
     <bean id="pe" class="in.atish.beans.PetrolEngine"/>
 	<bean id="de" class="in.atish.beans.DieselEngine"/>
-	<bean id="ca" class="in.atish.beans.Car"/>
 	
-    
+	<!-- bean with lazy initialization or loading -->
+	<bean id="car" class="in.atish.beans.Car" lazy-init="true">
+		<property name="eng" ref="de"/> <!-- calls setEng() method -->
+	</bean>
 
 </beans>

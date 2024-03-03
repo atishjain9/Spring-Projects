@@ -9,6 +9,11 @@ public class Test {
 
 		//Starting IOC Container
 		ApplicationContext context=new ClassPathXmlApplicationContext("spring-beans.xml");
+		System.out.println("-------------------------------------");
+		//Car car=context.getBean(Car.class);
+		
+		//car.drive();
+		
 	}
 
 }
